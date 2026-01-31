@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс C - Codemy</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Codemy Logo">
+                <span>CODEMY</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../index.html#courses">Курсы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="course-page">
+        <aside class="sidebar">
+            <h2>🔧 C</h2>
+            <div class="lessons-list">
+                <div class="lesson-item active" data-lesson="1">
+                    <span class="lesson-number">1</span>
+                    <span class="lesson-title">Введение в C</span>
+                </div>
+                <div class="lesson-item" data-lesson="2">
+                    <span class="lesson-number">2</span>
+                    <span class="lesson-title">Переменные</span>
+                </div>
+                <div class="lesson-item" data-lesson="3">
+                    <span class="lesson-number">3</span>
+                    <span class="lesson-title">Указатели</span>
+                </div>
+                <div class="lesson-item" data-lesson="4">
+                    <span class="lesson-number">4</span>
+                    <span class="lesson-title">Функции</span>
+                </div>
+                <div class="lesson-item" data-lesson="5">
+                    <span class="lesson-number">5</span>
+                    <span class="lesson-title">Массивы</span>
+                </div>
+                <div class="lesson-item" data-lesson="6">
+                    <span class="lesson-number">6</span>
+                    <span class="lesson-title">Структуры</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="lesson-content">
+            <div class="lesson" id="lesson-1">
+                <h1>Урок 1: Введение в C</h1>
+                
+                <h2>Что такое C?</h2>
+                <p>C - фундаментальный язык программирования для:</p>
+                <ul>
+                    <li>Операционных систем (Linux, Windows)</li>
+                    <li>Embedded систем</li>
+                    <li>Драйверов устройств</li>
+                    <li>Системного программирования</li>
+                </ul>
+
+                <h2>Первая программа</h2>
+                <div class="code-block">
+                    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Привет, мир!\n");
+    return 0;
+}</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Задание 1:</h3>
+                    <p>Создайте программу, которая выводит ваше имя.</p>
+                    <div class="code-editor">
+                        <textarea id="code-1" placeholder="// Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(1)" class="run-button">▶ Запустить</button>
+                        <div id="output-1" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+
+            <div class="lesson hidden" id="lesson-2">
+                <h1>Урок 2: Переменные и типы данных</h1>
+                
+                <h2>Типы данных в C</h2>
+                <div class="code-block">
+                    <pre><code>int age = 25;
+float price = 99.99;
+char grade = 'A';
+double pi = 3.14159;</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Задание 2:</h3>
+                    <p>Создайте переменные и выведите их с помощью printf.</p>
+                    <div class="code-editor">
+                        <textarea id="code-2" placeholder="// Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(2)" class="run-button">▶ Запустить</button>
+                        <div id="output-2" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button prev" onclick="prevLesson()">← Предыдущий урок</button>
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/course.js"></script>
+</body>
+</html>

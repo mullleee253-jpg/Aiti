@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс Python - Codemy</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Codemy Logo">
+                <span>CODEMY</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../index.html#courses">Курсы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="course-page">
+        <aside class="sidebar">
+            <h2>🐍 Python</h2>
+            <div class="lessons-list">
+                <div class="lesson-item active" data-lesson="1">
+                    <span class="lesson-number">1</span>
+                    <span class="lesson-title">Введение в Python</span>
+                </div>
+                <div class="lesson-item" data-lesson="2">
+                    <span class="lesson-number">2</span>
+                    <span class="lesson-title">Переменные и типы данных</span>
+                </div>
+                <div class="lesson-item" data-lesson="3">
+                    <span class="lesson-number">3</span>
+                    <span class="lesson-title">Условия и циклы</span>
+                </div>
+                <div class="lesson-item" data-lesson="4">
+                    <span class="lesson-number">4</span>
+                    <span class="lesson-title">Функции</span>
+                </div>
+                <div class="lesson-item" data-lesson="5">
+                    <span class="lesson-number">5</span>
+                    <span class="lesson-title">Списки и кортежи</span>
+                </div>
+                <div class="lesson-item" data-lesson="6">
+                    <span class="lesson-number">6</span>
+                    <span class="lesson-title">Словари и множества</span>
+                </div>
+                <div class="lesson-item" data-lesson="7">
+                    <span class="lesson-number">7</span>
+                    <span class="lesson-title">Работа с файлами</span>
+                </div>
+                <div class="lesson-item" data-lesson="8">
+                    <span class="lesson-number">8</span>
+                    <span class="lesson-title">ООП в Python</span>
+                </div>
+                <div class="lesson-item" data-lesson="9">
+                    <span class="lesson-number">9</span>
+                    <span class="lesson-title">Модули и пакеты</span>
+                </div>
+                <div class="lesson-item" data-lesson="10">
+                    <span class="lesson-number">10</span>
+                    <span class="lesson-title">Финальный проект</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="lesson-content">
+            <div class="lesson" id="lesson-1">
+                <h1>Урок 1: Введение в Python</h1>
+                <div class="lesson-intro">
+                    <p>Добро пожаловать на первый урок курса Python! Python - это мощный и простой в изучении язык программирования.</p>
+                </div>
+
+                <h2>Что такое Python?</h2>
+                <p>Python - это высокоуровневый язык программирования, который используется для:</p>
+                <ul>
+                    <li>Веб-разработки (Django, Flask)</li>
+                    <li>Анализа данных и машинного обучения</li>
+                    <li>Автоматизации задач</li>
+                    <li>Разработки игр</li>
+                </ul>
+
+                <h2>Ваша первая программа</h2>
+                <div class="code-block">
+                    <pre><code>print("Привет, мир!")
+print("Я изучаю Python!")</code></pre>
+                </div>
+
+                <h2>Практическое задание</h2>
+                <div class="task">
+                    <h3>Задание 1:</h3>
+                    <p>Напишите программу, которая выводит ваше имя и возраст.</p>
+                    <div class="code-editor">
+                        <textarea id="code-1" placeholder="# Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(1)" class="run-button">▶ Запустить</button>
+                        <div id="output-1" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+
+            <div class="lesson hidden" id="lesson-2">
+                <h1>Урок 2: Переменные и типы данных</h1>
+                
+                <h2>Переменные</h2>
+                <p>Переменные используются для хранения данных. В Python не нужно объявлять тип переменной.</p>
+                
+                <div class="code-block">
+                    <pre><code># Примеры переменных
+name = "Иван"
+age = 25
+height = 1.75
+is_student = True
+
+print(name)
+print(age)</code></pre>
+                </div>
+
+                <h2>Типы данных</h2>
+                <ul>
+                    <li><strong>int</strong> - целые числа (1, 42, -10)</li>
+                    <li><strong>float</strong> - дробные числа (3.14, -0.5)</li>
+                    <li><strong>str</strong> - строки ("Hello", 'Python')</li>
+                    <li><strong>bool</strong> - логические значения (True, False)</li>
+                </ul>
+
+                <h2>Практическое задание</h2>
+                <div class="task">
+                    <h3>Задание 2:</h3>
+                    <p>Создайте переменные для имени, возраста и города. Выведите их на экран.</p>
+                    <div class="code-editor">
+                        <textarea id="code-2" placeholder="# Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(2)" class="run-button">▶ Запустить</button>
+                        <div id="output-2" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button prev" onclick="prevLesson()">← Предыдущий урок</button>
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+
+            <div class="lesson hidden" id="lesson-3">
+                <h1>Урок 3: Условия и циклы</h1>
+                
+                <h2>Условные операторы</h2>
+                <div class="code-block">
+                    <pre><code>age = 18
+
+if age >= 18:
+    print("Вы совершеннолетний")
+else:
+    print("Вы несовершеннолетний")</code></pre>
+                </div>
+
+                <h2>Цикл for</h2>
+                <div class="code-block">
+                    <pre><code>for i in range(5):
+    print(i)
+
+# Вывод: 0, 1, 2, 3, 4</code></pre>
+                </div>
+
+                <h2>Цикл while</h2>
+                <div class="code-block">
+                    <pre><code>count = 0
+while count < 5:
+    print(count)
+    count += 1</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Задание 3:</h3>
+                    <p>Напишите программу, которая выводит числа от 1 до 10.</p>
+                    <div class="code-editor">
+                        <textarea id="code-3" placeholder="# Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(3)" class="run-button">▶ Запустить</button>
+                        <div id="output-3" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button prev" onclick="prevLesson()">← Предыдущий урок</button>
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/course.js"></script>
+</body>
+</html>

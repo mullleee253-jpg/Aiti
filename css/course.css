@@ -1,0 +1,245 @@
+.course-page {
+    display: flex;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+}
+
+.sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    padding: 2rem;
+    position: fixed;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    border-right: 2px solid #e0e0e0;
+}
+
+.sidebar h2 {
+    color: #2E86AB;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.lessons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.lesson-item:hover {
+    transform: translateX(5px);
+    border-color: #2E86AB;
+}
+
+.lesson-item.active {
+    background: linear-gradient(135deg, #2E86AB 0%, #3CB371 100%);
+    color: white;
+}
+
+.lesson-item.completed {
+    background: #e8f5e9;
+}
+
+.lesson-number {
+    width: 30px;
+    height: 30px;
+    background: rgba(46, 134, 171, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.lesson-item.active .lesson-number {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lesson-title {
+    font-size: 0.95rem;
+}
+
+.lesson-content {
+    margin-left: 300px;
+    padding: 3rem;
+    flex: 1;
+    max-width: 900px;
+}
+
+.lesson {
+    animation: fadeIn 0.5s ease;
+}
+
+.lesson.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lesson h1 {
+    color: #2E86AB;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.lesson h2 {
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.lesson-intro {
+    background: linear-gradient(135deg, #2E86AB 0%, #3CB371 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.code-block code {
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.task {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border-left: 4px solid #3CB371;
+}
+
+.task h3 {
+    color: #3CB371;
+    margin-bottom: 1rem;
+}
+
+.code-editor {
+    margin-top: 1rem;
+}
+
+.code-editor textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.run-button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #2E86AB 0%, #3CB371 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.run-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 134, 171, 0.3);
+}
+
+.output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    min-height: 50px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    white-space: pre-wrap;
+}
+
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #2E86AB 0%, #3CB371 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 134, 171, 0.3);
+}
+
+.nav-button.prev {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    
+    .lesson-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    .course-page {
+        flex-direction: column;
+    }
+}

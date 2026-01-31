@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс Java - Codemy</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Codemy Logo">
+                <span>CODEMY</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../index.html#courses">Курсы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="course-page">
+        <aside class="sidebar">
+            <h2>☕ Java</h2>
+            <div class="lessons-list">
+                <div class="lesson-item active" data-lesson="1">
+                    <span class="lesson-number">1</span>
+                    <span class="lesson-title">Введение в Java</span>
+                </div>
+                <div class="lesson-item" data-lesson="2">
+                    <span class="lesson-number">2</span>
+                    <span class="lesson-title">Переменные и типы</span>
+                </div>
+                <div class="lesson-item" data-lesson="3">
+                    <span class="lesson-number">3</span>
+                    <span class="lesson-title">Условия и циклы</span>
+                </div>
+                <div class="lesson-item" data-lesson="4">
+                    <span class="lesson-number">4</span>
+                    <span class="lesson-title">Методы</span>
+                </div>
+                <div class="lesson-item" data-lesson="5">
+                    <span class="lesson-number">5</span>
+                    <span class="lesson-title">ООП: Классы</span>
+                </div>
+                <div class="lesson-item" data-lesson="6">
+                    <span class="lesson-number">6</span>
+                    <span class="lesson-title">Наследование</span>
+                </div>
+                <div class="lesson-item" data-lesson="7">
+                    <span class="lesson-number">7</span>
+                    <span class="lesson-title">Коллекции</span>
+                </div>
+                <div class="lesson-item" data-lesson="8">
+                    <span class="lesson-number">8</span>
+                    <span class="lesson-title">Исключения</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="lesson-content">
+            <div class="lesson" id="lesson-1">
+                <h1>Урок 1: Введение в Java</h1>
+                
+                <h2>Что такое Java?</h2>
+                <p>Java - это объектно-ориентированный язык программирования, который используется для:</p>
+                <ul>
+                    <li>Enterprise приложений</li>
+                    <li>Android разработки</li>
+                    <li>Веб-приложений</li>
+                    <li>Игр (Minecraft написан на Java!)</li>
+                </ul>
+
+                <h2>Первая программа</h2>
+                <div class="code-block">
+                    <pre><code>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Привет, мир!");
+    }
+}</code></pre>
+                </div>
+
+                <h2>Структура программы</h2>
+                <ul>
+                    <li><code>public class</code> - объявление класса</li>
+                    <li><code>main</code> - точка входа в программу</li>
+                    <li><code>System.out.println()</code> - вывод на экран</li>
+                </ul>
+
+                <div class="task">
+                    <h3>Задание 1:</h3>
+                    <p>Создайте программу, которая выводит ваше имя.</p>
+                    <div class="code-editor">
+                        <textarea id="code-1" placeholder="// Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(1)" class="run-button">▶ Запустить</button>
+                        <div id="output-1" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+
+            <div class="lesson hidden" id="lesson-2">
+                <h1>Урок 2: Переменные и типы данных</h1>
+                
+                <h2>Типы данных в Java</h2>
+                <div class="code-block">
+                    <pre><code>int age = 25;           // Целое число
+double price = 99.99;   // Дробное число
+String name = "Иван";   // Строка
+boolean isActive = true; // Логическое значение
+char grade = 'A';       // Символ</code></pre>
+                </div>
+
+                <h2>Константы</h2>
+                <div class="code-block">
+                    <pre><code>final double PI = 3.14159;
+final int MAX_SIZE = 100;</code></pre>
+                </div>
+
+                <div class="task">
+                    <h3>Задание 2:</h3>
+                    <p>Создайте переменные для имени, возраста и города. Выведите их.</p>
+                    <div class="code-editor">
+                        <textarea id="code-2" placeholder="// Напишите ваш код здесь"></textarea>
+                        <button onclick="runCode(2)" class="run-button">▶ Запустить</button>
+                        <div id="output-2" class="output"></div>
+                    </div>
+                </div>
+
+                <div class="lesson-nav">
+                    <button class="nav-button prev" onclick="prevLesson()">← Предыдущий урок</button>
+                    <button class="nav-button next" onclick="nextLesson()">Следующий урок →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/course.js"></script>
+</body>
+</html>
